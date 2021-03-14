@@ -4,7 +4,7 @@ settings:
   aggregator: consolidator
   verbose: false
   env:
-    application_hostname: JIRAD-LoadB-1JRDUVRW5NU0E-1241022264.us-west-2.elb.amazonaws.com # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
+    application_hostname: asi-j-loadb-179vjznfgpedc-429147954.us-west-2.elb.amazonaws.com # Jira DC hostname without protocol and port e.g. test-jira.atlassian.com or localhost
     application_protocol: http # http or https
     application_port: 80 # 80, 443, 8080, 2990, etc
     secure: True # Set False to allow insecure connections, e.g. when using self-signed SSL certificate
@@ -12,11 +12,11 @@ settings:
     admin_login: admin
     admin_password: admin
     load_executor: jmeter # jmeter and locust are supported. jmeter by default.
-    concurrency: 200 # number of concurrent virtual users for jmeter or locust scenario
-    test_duration: 45m
-    ramp-up: 3m # time to spin all concurrent users
-    total_actions_per_hour: 54500 # number of total JMeter/Locust actions per hour
-    WEBDRIVER_VISIBLE: False
+    concurrency: 2 # number of concurrent virtual users for jmeter or locust scenario
+    test_duration: 3m
+    ramp-up: 3s # time to spin all concurrent users
+    total_actions_per_hour: 5450 # number of total JMeter/Locust actions per hour
+    WEBDRIVER_VISIBLE: True
     JMETER_VERSION: 5.2.1
     LANGUAGE: en_US.utf8
     allow_analytics: Yes # Allow sending basic run analytics to Atlassian. These analytics help us to understand how the tool is being used and help us to continue to invest in this tooling. For more details please see our README.
